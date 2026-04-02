@@ -1,0 +1,9 @@
+export async function getUsers() {
+  const res = await fetch("http://localhost:5000/users");
+
+  if (!res.ok) {
+    throw new Error("Load users failed");
+  }
+
+  return res.json();
+}
